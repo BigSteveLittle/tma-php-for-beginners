@@ -1,5 +1,5 @@
 <?php
-    // 'echo': output strings, numbers, HTMl etc.
+    // 'echo': output strings, numbers, HTML etc.
     echo 'Hello mate.', 123, 10.5, '<h1>Heading</h1>';
     echo '<br>';
     // 'print': as echo but only handles 1 argument.
