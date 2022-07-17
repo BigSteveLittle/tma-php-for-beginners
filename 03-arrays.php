@@ -32,7 +32,7 @@
     $person = [
         'firstName' => 'Engelburt', 
         'lastName' => 'Humperdink',
-        'email' => 'mynest albumis@gmail.com' 
+        'email' => 'mynextalbumis@gmail.com' 
     ];
     // Output.
     echo $person['lastName'];
