@@ -17,10 +17,10 @@
     unregisterUser();
     // 2a. 'arguments': input variables.
     echo "---- standard function use of arguments ----<br>";
-    function regiUser($email) {
+    function regUser($email) {
         echo "Email: $email now registered kiddo!<br>";
     }
-    regiUser('mynextalbumis@gmail.com');
+    regUser('mynextalbumis@gmail.com');
     // 2b. 'multiple arguments': multiple input variables.
     echo "---- standard function use of multiple arguments ----<br>";
     function summingUp($a, $b) {

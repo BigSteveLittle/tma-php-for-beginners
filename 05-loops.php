@@ -66,8 +66,8 @@
     echo "---- foreach loop (for associative[multidimensional] arrays) with index ----<br>";
         $people = [
             [
-                'firstName' => 'Engelburt', 
-                'lastName' => 'Humperdink',
+                'firstName' => 'Engelbert', 
+                'lastName' => 'Humperdinck',
                 'email' => 'mynextalbumis@gmail.com' 
             ],
             [
