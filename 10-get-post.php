@@ -3,15 +3,14 @@
     
     // 1. '$_GET': allows the passing of data through URLs.
     if(isset($_GET['submit'])) {
-        echo $_GET['person-name'];
-        echo $_GET['age'];
-    }
-    
+        echo htmlspecialchars($_GET['person-name']);
+        echo htmlspecialchars($_GET['age']);
+    }  
 ?>
 
-<a href="<?php echo $_SERVER['PHP_SELF']; ?>?person-name=Dude&age=99">Clunk</a>
+<a href="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>?person-name=Dude&age=99">Clunk</a>
 
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="GET">
     <div>
         <label for="person-name">Name: </label>
         <input type="text" name="person-name">
@@ -26,12 +25,12 @@
 <?php
     // 2. '$_POST': allows the passing of data through forms.
     if(isset($_POST['submit'])) {
-        echo $_POST['person-name'];
-        echo $_POST['age'];
+        echo htmlspecialchars($_POST['person-name']);
+        echo htmlspecialchars($_POST['age']);
     }
 ?>
 
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
     <div>
         <label for="person-name">Name: </label>
         <input type="text" name="person-name">
