@@ -4,11 +4,7 @@
 .DS_Store
 .vscode/
 archives/
-composer.json
-composer.lock
 Icon?
-package.json
-package-lock.json
+node_modules
 resources/
-sqltools_20220618165333_24939.log
 vendor/
