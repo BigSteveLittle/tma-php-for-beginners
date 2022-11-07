@@ -1,4 +1,7 @@
-<?php include './includes/header.php' ?>
+<?php 
+    $title = 'Leave Feedback';
+    include './includes/header.php';
+?>
             <h2>Feedback</h2>
                 <p class="lead text-center">Leave feedback for RedAndBlackZone</p>
                 <form action="" class="mt-4 w-75">

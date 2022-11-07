@@ -1,18 +1,25 @@
-<?php include './includes/header.php' ?>
-            <h2>Feedback</h2>
-                <div class="card my-3">
-                    <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta molestias animi earum eos dolorem repellat a quibusdam, aperiam vero repellendus voluptatibus natus deserunt sed doloribus inventore, totam labore maxime perferendis! </p>
+<?php 
+    $title = 'Feedback';
+    include './includes/header.php'; 
+    $query = 'SELECT * 
+                FROM feedback  
+                ';
+    $output = mysqli_query($connection, $query);
+    $feedback = mysqli_fetch_all($output, MYSQLI_ASSOC);
+?>
+            <h2>Past Feedback</h2>
+                <?php if(empty($feedback)): ?>
+                    <p class="lead mt3">No feedback Brother...</p>
+                <?php endif; ?>
+                <!-- Feedback Card. -->
+                <?php foreach($feedback as $feed): ?>
+                    <div class="card my-3 w-75">
+                        <div class="card-body">
+                            <small><p class="fst-italic"><?= $feed['feedback-date']; ?></p></small>
+                            <p><?php echo $feed['feedback-text']; ?> </p>
+                            <h3 class="feed-name text-end"><?= $feed['person-name']; ?></h3>
+                            <h4 class="fs-6 text-end"><?= $feed['person-email']; ?> </h4>
+                        </div>
                     </div>
-                </div>
-                <div class="card my-3">
-                    <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta molestias animi earum eos dolorem repellat a quibusdam, aperiam vero repellendus voluptatibus natus deserunt sed doloribus inventore, totam labore maxime perferendis! </p>
-                    </div>
-                </div>
-                <div class="card my-3">
-                    <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta molestias animi earum eos dolorem repellat a quibusdam, aperiam vero repellendus voluptatibus natus deserunt sed doloribus inventore, totam labore maxime perferendis! </p>
-                    </div>
-                </div>
-<?php include './includes/footer.php' ?>
+                <?php endforeach; ?>
+    <?php include './includes/footer.php' ?>
