@@ -5,6 +5,6 @@
 .vscode/
 archives/
 Icon?
-node_modules
+node_modules/
 resources/
 vendor/
