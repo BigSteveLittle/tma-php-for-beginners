@@ -15,10 +15,10 @@
                 <?php foreach($feedback as $feed): ?>
                     <div class="card my-3 w-75">
                         <div class="card-body">
-                            <small><p class="fst-italic"><?= $feed['feedback-date']; ?></p></small>
-                            <p><?php echo $feed['feedback-text']; ?> </p>
-                            <h3 class="feed-name text-end"><?= $feed['person-name']; ?></h3>
-                            <h4 class="fs-6 text-end"><?= $feed['person-email']; ?> </h4>
+                            <small><p class="fst-italic"><?= $feed['feedback_date']; ?></p></small>
+                            <p><?php echo $feed['feedback_text']; ?> </p>
+                            <h3 class="feed-name text-end"><?= $feed['person_name']; ?></h3>
+                            <h4 class="fs-6 text-end"><?= $feed['person_email']; ?> </h4>
                         </div>
                     </div>
                 <?php endforeach; ?>
